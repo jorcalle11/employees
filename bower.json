@@ -1,0 +1,30 @@
+{
+  "name": "employees",
+  "description": "Aplicación que muestra un listado de usuarios",
+  "main": "index.js",
+  "authors": [
+    "Jorge Calle => @Jomaca11"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "ecmascript",
+    "6",
+    "usuarios",
+    "babelify",
+    "browserify",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/jorcalle11/employees",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
