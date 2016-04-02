@@ -2,16 +2,32 @@
 <html>
   <head lang="es">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Listado de Usuarios | Jorge Calle</title>
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/Materialize/bin/materialize.css" />
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
     <!-- endinject -->
   </head>
   <body>
-    <h1>hola mundo!</h1>
-    <section id="app"></section>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Usuarios</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://about.me/jorcalle11" target="_blank"><i class="ion-person"></i></a></li>
+          <li><a href="https://github.com/jorcalle11" target="_blank"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://twitter.com/" target="_blank"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="https://www.facebook.com/jorcalle11" target="_blank"><i class="ion-social-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="app" class="container"></section>
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Materialize/bin/materialize.js"></script>
     <!-- endbower -->
     <!-- inject:js -->
     <script src="/scripts/bundle.js"></script>

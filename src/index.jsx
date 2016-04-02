@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import users from './users';
+import UserList from './components/user-list';
 
-let Row = React.createClass({
-    render: function() {
-        return <div>Hola {this.props.name}</div>;
-    }
-});
-
-ReactDOM.render(<Row name="Nicole"/>, document.getElementById('app'));
+ReactDOM.render(<UserList users={users.data}/>, document.getElementById('app'));

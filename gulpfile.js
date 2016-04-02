@@ -20,14 +20,19 @@ gulp.task('html', function() {
   .pipe(connect.reload());
 });
 
+gulp.task('css', function() {
+  gulp.src('./app/stylesheets/*.css')
+  .pipe(connect.reload());
+});
+
 gulp.task('bower',function() {
-  gulp.src(files.html)
+  gulp.src('./app/index.html')
   .pipe(wiredep())
   .pipe(gulp.dest('./app'));
 });
 
 gulp.task('inject',function(){
-    var source = gulp.src(['./app/scripts/*.js'],{read:false});
+    var source = gulp.src(['./app/scripts/*.js','./app/stylesheets/*.css'],{read:false});
     gulp.src('index.html', {cwd: './app'})
     .pipe(inject(source, {
         ignorePath: '/app'
@@ -48,7 +53,9 @@ gulp.task('build', function() {
 
 gulp.task('watch', function() {
   gulp.watch('./app/index.html',['html']);
+  gulp.watch('./app/stylesheets/*.css',['css','inject']);
   gulp.watch('./src/**/*.jsx',['build','inject']);
+  gulp.watch('./bower.json',['bower']);
 });
 
-gulp.task('default',['server','watch']);
+gulp.task('default',['server','watch','inject']);

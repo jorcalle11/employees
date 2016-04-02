@@ -26,5 +26,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.5",
+    "Ionicons": "ionicons#^2.0.1"
+  }
 }
